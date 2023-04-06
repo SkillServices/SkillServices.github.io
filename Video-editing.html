@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Chatra {literal} -->
+<script>
+  (function(d, w, c) {
+      w.ChatraID = 'ZSrTg2hr2WisGrHBu';
+      var s = d.createElement('script');
+      w[c] = w[c] || function() {
+          (w[c].q = w[c].q || []).push(arguments);
+      };
+      s.async = true;
+      s.src = 'https://call.chatra.io/chatra.js';
+      if (d.head) d.head.appendChild(s);
+  })(document, window, 'Chatra');
+</script>
+<!-- /Chatra {/literal} -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="design-services2.css">
+
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+       <a href="/" id="navbar__logo"><i class="fa-regular fa-handshake"></i>Skill Services</a>
+       <div class="navbar__toggle" id="mobile-menu">
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+       </div>
+       <ul class="navbar__menu">
+           <li class="navbar__item">
+               <a href="/index.html" class="navbar__links"> Home </a>
+           </li>
+           <li class="navbar__item">
+               <a href="/tech.html" class="navbar__links"> Help </a>
+           </li>
+           <li class="navbar__item">
+               <a href="services.html" class="navbar__links"> Services </a>
+           </li>
+           <li class="navbar__btn">
+               <a href="/" class="button"> Sign up </a></li>
+       </ul>
+      </div>  
+   </nav>
+
+   <title>Skill Services</title>
+  <section>
+    <div class="container flex">
+      <div class="left">
+        <div class="main_image">
+          <video controls src="Video-editing.mp4" width=400px class="slide">
+        </div>
+      </div>
+      <div class="right">
+        <h3>Professional Video Editing</h3>
+        <h4> Starting at <small>$</small>35</h4>
+        <p>I provide professional video editing services, specializing in creating high-quality videos for businesses,companies etc.</p>
+        <p1> PLEASE CONTACT US BEFORE ORDERING !!!!
+        </br>
+         </br>
+        <img src="images/Video pro con.png" width="440px" class="proandcon" >
+          </p1>
+          <div id="smart-button-container">
+            <div style="text-align: center;">
+              <div id="paypal-button-container"></div>
+            </div>
+          </div>
+        <script src="https://www.paypal.com/sdk/js?client-id=AcjrCJdZlGgkXm1399hn1ZyxZ3RxkyWC-wQs2IDE1_m-Yhcb2BFXNpFIEy3J2zZG8Pvqv2DlsdMsyI30&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+        <script>
+          function initPayPalButton() {
+            paypal.Buttons({
+              style: {
+                shape: 'pill',
+                color: 'silver',
+                layout: 'vertical',
+                label: 'paypal',
+                
+              },
+      
+              createOrder: function(data, actions) {
+                return actions.order.create({
+                  purchase_units: [{"amount":{"currency_code":"USD","value":1}}]
+                });
+              },
+      
+              onApprove: function(data, actions) {
+                return actions.order.capture().then(function(orderData) {
+                  
+                  // Full available details
+                  console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+      
+                  // Show a success message within this page, e.g.
+                  const element = document.getElementById('paypal-button-container');
+                  element.innerHTML = '';
+                  element.innerHTML = '<h3>Thank you for your payment!</h3>';
+      
+                  // Or go to another URL:  actions.redirect('thank_you.html');
+                  
+                });
+              },
+      
+              onError: function(err) {
+                console.log(err);
+              }
+            }).render('#paypal-button-container');
+          }
+          initPayPalButton();
+        </script>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.home');
+      line.style.background = change;
+    }
+  </script>
+   <script src="Service.design.js"></script>
+</body>
+
+</html>
+
+  
